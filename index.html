@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เค้ามีอะไรให้เธอดูคะ💗</title>
+<style>
+:root{--pink:#ef4e91;--pale:#fff0f6;--ink:#54233f}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Thai",sans-serif;color:var(--ink);background:linear-gradient(135deg,#321d3a,#8e476d 55%,#f3a6c7);min-height:100vh}
+main{max-width:1050px;margin:auto;padding:24px 16px 48px}
+header{text-align:center;color:#fff;padding:24px 8px}
+h1{font-size:clamp(2rem,6vw,4rem);margin:8px 0;text-shadow:0 3px 15px #411b3a}
+header p{font-size:1.1rem}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.card{background:#fff5f9ed;border:1px solid #ffd2e4;border-radius:24px;padding:clamp(20px,4vw,36px);box-shadow:0 18px 50px #28102d55}
+.lock{text-align:center}
+.emoji{font-size:3rem}
+h2{margin:8px 0 14px;font-size:1.5rem}
+input{width:100%;font-size:1.1rem;padding:15px 18px;border:2px solid #f6bfd7;border-radius:999px;background:#fff;margin:16px 0 12px;outline:none}
+input:focus{border-color:var(--pink);box-shadow:0 0 0 4px #ef4e9120}
+button{border:0;border-radius:999px;background:linear-gradient(90deg,#f45b9b,#d9357d);color:white;font-size:1.1rem;font-weight:700;padding:15px 22px;width:100%;cursor:pointer;box-shadow:0 8px 18px #e34b8c30}
+button:active{transform:scale(.99)}
+#feedback{min-height:28px;color:#c52d6c;font-weight:650;margin-top:10px}
+#surprise{display:none;text-align:center;animation:pop .65s ease both}
+#surprise.show{display:block}
+.photo{width:100%;max-height:340px;object-fit:cover;border-radius:14px;border:8px solid white;box-shadow:0 8px 25px #54233f25}
+.note{font-size:1.1rem;line-height:1.9}
+.ribbon{display:inline-block;background:#f9c0d8;padding:8px 18px;border-radius:10px;transform:rotate(-2deg);font-weight:800;margin-top:10px}
+.hint{font-size:.9rem;opacity:.75}
+footer{text-align:center;color:#fff;margin-top:24px}
+.hearts{font-size:1.5rem;letter-spacing:8px}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:720px){.layout{grid-template-columns:1fr}header{padding-top:10px}.card{padding:24px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="hearts">♡ 💗 ♡</div>
+<h1>มีอะไรอยากบอกที่รักคะะะะ</h1>
+<p>เค้าอยากให้เธอให้อภัยเค้าน้าาาเค้ารักเธนะ🥺</p>
+</header>
+<div class="layout">
+<section class="card lock" id="lockCard">
+<div class="emoji">🔐</div>
+<h2>ใส่รหัสลับเพื่อดูเซอร์ไพรส์</h2>
+<p>คำใบ้: วันที่พิเศษของเรา หรือรหัสที่มีแค่เราสองคนรู้ 💌</p>
+<form id="codeForm">
+<input id="secretCode" type="password" placeholder="กรอกรหัสลับที่นี่…" autocomplete="off" required aria-label="รหัสลับ">
+<button type="submit">💗 ยืนยันรหัส</button>
+</form>
+<div id="feedback" role="status"></div>
+<p class="hint">ใส่ถูกแล้วจะมีข้อความพิเศษรออยู่ ✨</p>
+</section>
+<section class="card" id="surprise" aria-live="polite">
+<div class="emoji">💖 🎉 💖</div>
+<h2>เปิดเจอแล้ว เก่งที่สุดอีอ้วน!</h2>
+<!-- ใส่รูปภาพที่แก้ไขแล้วตรงนี้ -->
+<img class="photo" src="data:image/png;base64,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
+<p class="note">ขอโทษนะที่ทำให้เสียใจเค้าอยากบอกว่ารักเธอนะอีอ้วนนนนนน</p>
+<div class="ribbon">เธอเป็นคนอ้วนสำคัญของเรานะ ♡</div>
+<p>ถ้าเธอยังพร้อม เราอยากเริ่มต้นใหม่และทำให้ดีขึ้นนะ 💌</p>
+<button id="heartButton" type="button">ส่งหัวใจกลับให้เค้าได้นะ💕</button>
+<p id="heartReply" class="hint"></p>
+</section>
+</div>
+<footer><p>ทำด้วยความตั้งใจ เพื่ออ้วนนะ ♡</p><p class="hint">แก้รหัสและข้อความได้ในไฟล์ HTML</p></footer>
+</main>
+<script>
+/* เปลี่ยนรหัสตรงนี้ได้ เช่น "1314" หรือวันสำคัญของคุณ */
+const SECRET_CODE = "190926";
+const form = document.getElementById("codeForm");
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  const value = document.getElementById("secretCode").value.trim();
+  const feedback = document.getElementById("feedback");
+  if(value === SECRET_CODE){
+    document.getElementById("surprise").classList.add("show");
+    document.getElementById("lockCard").style.display = "none";
+    feedback.textContent = "";
+    document.getElementById("surprise").scrollIntoView({behavior:"smooth",block:"center"});
+  } else {
+    feedback.textContent = "จำไม่ได้หรออ้วนนนน!!!1";
+  }
+});
+document.getElementById("heartButton").addEventListener("click",()=>{
+  document.getElementById("heartReply").textContent = "ได้รับหัวใจแล้วนะอ้วนนน💖";
+  document.getElementById("heartButton").textContent = "💗 ส่งหัวใจแล้ว";
+});
+</script>
+</body>
+</html>
